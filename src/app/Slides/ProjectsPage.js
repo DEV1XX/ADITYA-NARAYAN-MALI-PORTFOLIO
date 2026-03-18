@@ -15,6 +15,16 @@ export const ProjectsPage = () => {
 
   const projects = [
     {
+      id: "db-buddy",
+      title: "DB BUDDY",
+      description:
+        "an AI-powered SaaS platform that converts Natural Language to SQL and returns query results.",
+      techStack: ["AI integration","MongoDB", "Express.js", "React", "Node.js", "JWT"],
+      link: "https://db-buddy.tech",
+      status: "Live",
+      screenshot: "/db-buddy-preview.png",
+    },
+    {
       id: "transmart",
       title: "TRANSMART",
       description:
