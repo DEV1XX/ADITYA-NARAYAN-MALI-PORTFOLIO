@@ -7,182 +7,327 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+// ─── SKILL DATA ────────────────────────────────────────────────────────────────
+const SKILL_CATEGORIES = [
+  {
+    id: "languages",
+    label: "Programming Languages",
+    accent: "#e2e8f0",
+    accentDim: "#94a3b812",
+    barFrom: "#64748b",
+    barTo: "#cbd5e1",
+  },
+  {
+    id: "frameworks",
+    label: "Libraries / Frameworks",
+    accent: "#cbd5e1",
+    accentDim: "#64748b10",
+    barFrom: "#475569",
+    barTo: "#e2e8f0",
+  },
+  {
+    id: "databases",
+    label: "Databases",
+    accent: "#d1d5db",
+    accentDim: "#6b728010",
+    barFrom: "#4b5563",
+    barTo: "#e5e7eb",
+  },
+  {
+    id: "integrations",
+    label: "Integrations",
+    accent: "#e2e8f0",
+    accentDim: "#94a3b812",
+    barFrom: "#64748b",
+    barTo: "#cbd5e1",
+  },
+  {
+    id: "tools",
+    label: "Tools / Platforms",
+    accent: "#f8fafc",
+    accentDim: "#94a3b80e",
+    barFrom: "#64748b",
+    barTo: "#f1f5f9",
+  },
+];
+
+SKILL_CATEGORIES[0].items = [
+  { id: "c",   name: "C",           proficiency: 85 },
+  { id: "cpp", name: "C++",         proficiency: 70 },
+  { id: "js",  name: "JavaScript",  proficiency: 90 },
+  { id: "python",  name: "Python",  proficiency: 75 },
+];
+SKILL_CATEGORIES[1].items = [
+  { id: "htmlcss",  name: "HTML & CSS",   proficiency: 95 },
+  { id: "react",    name: "React JS",        proficiency: 95 },
+  { id: "nextjs",   name: "Next.js",      proficiency: 90 },
+  { id: "tailwind", name: "Tailwind CSS", proficiency: 95 },
+  { id: "nodejs",   name: "Node JS",      proficiency: 78 },
+  { id: "express",  name: "Express JS",   proficiency: 75 },
+  { id: "redux",    name: "Redux",        proficiency: 85 },
+];
+SKILL_CATEGORIES[4].items = [
+  { id: "github", name: "GitHub", proficiency: 88 },
+  { id: "git",    name: "Git",    proficiency: 85 },
+  { id: "vscode", name: "VSCode", proficiency: 92 },
+];
+SKILL_CATEGORIES[2].items = [
+  { id: "sql",     name: "SQL",     proficiency: 72 },
+  { id: "mongodb", name: "MongoDB", proficiency: 80 },
+];
+SKILL_CATEGORIES[3].items = [
+  { id: "paymentGateway",   name: "Payment Gateways [ Stripe, Razorpay ]",        proficiency: 90 },
+  { id: "aiapi",   name: "AI APIs [ OpenAI, Gemini ]",        proficiency: 95 },
+];
+
+
+
+function proficiencyLabel(pct) {
+  if (pct >= 90) return "Expert";
+  if (pct >= 75) return "Advanced";
+  if (pct >= 60) return "Intermediate";
+  return "Beginner";
+}
+
+// ─── SKILL CARD ────────────────────────────────────────────────────────────────
+function SkillCard({ skill, accent, accentDim, barFrom, barTo }) {
+  return (
+    <div
+      className="skill-card group relative flex flex-col gap-3 rounded-xl p-5 transition-all duration-300"
+      style={{
+        background: "rgba(255,255,255,0.02)",
+        border: "1px solid rgba(255,255,255,0.05)",
+      }}
+    >
+      {/* Skill name + proficiency label */}
+      <div className="flex items-start justify-between gap-2">
+        <span
+          className="font-orbitron text-white leading-tight"
+          style={{ fontSize: "clamp(12px, 1.4vw, 15px)", fontWeight: 500, letterSpacing: "0.05em" }}
+        >
+          {skill.name}
+        </span>
+        <span
+          className="shrink-0 rounded-full px-2.5 py-1 font-mono"
+          style={{
+            fontSize: "clamp(9px, 1vw, 11px)",
+            color: "rgba(255,255,255,0.4)",
+            background: "rgba(255,255,255,0.04)",
+            border: "1px solid rgba(255,255,255,0.08)",
+            letterSpacing: "0.04em",
+          }}
+        >
+          {proficiencyLabel(skill.proficiency)}
+        </span>
+      </div>
+
+      {/* Progress bar track */}
+      <div
+        className="relative w-full overflow-hidden rounded-full"
+        style={{ background: "rgba(255,255,255,0.08)", height: "2px" }}
+      >
+        <div
+          className="skill-bar absolute left-0 top-0 h-full rounded-full"
+          data-target={skill.proficiency}
+          style={{
+            width: "0%",
+            background: `linear-gradient(90deg, ${barFrom}, ${barTo})`,
+          }}
+        />
+      </div>
+
+      {/* Percentage */}
+      <div className="flex justify-end">
+        <span
+          className="skill-pct font-mono"
+          data-target={skill.proficiency}
+          style={{ fontSize: "clamp(9px, 0.95vw, 11px)", color: "rgba(255,255,255,0.25)" }}
+        >
+          0%
+        </span>
+      </div>
+
+      {/* Hover border brightening */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+      />
+    </div>
+  );
+}
+
+// ─── CATEGORY BLOCK ────────────────────────────────────────────────────────────
+function CategoryBlock({ category }) {
+  return (
+    <div className="category-block flex flex-col gap-4">
+      <div className="flex items-center gap-3">
+        <div
+          className="h-px flex-1"
+          style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.12), transparent)" }}
+        />
+        <span
+          className="font-orbitron shrink-0 uppercase tracking-widest"
+          style={{
+            fontSize: "clamp(10px, 1.1vw, 13px)",
+            color: "rgba(255,255,255,0.5)",
+            fontWeight: 600,
+          }}
+        >
+          {category.label}
+        </span>
+        <div
+          className="h-px w-6 shrink-0"
+          style={{ background: "rgba(255,255,255,0.12)" }}
+        />
+      </div>
+
+      <div
+        className="grid gap-3"
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(200px, 100%), 1fr))" }}
+      >
+        {category.items.map((skill) => (
+          <SkillCard
+            key={skill.id}
+            skill={skill}
+            accent={category.accent}
+            accentDim={category.accentDim}
+            barFrom={category.barFrom}
+            barTo={category.barTo}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── MAIN PAGE ─────────────────────────────────────────────────────────────────
 export const SkillsPage = () => {
   const containerRef = useRef(null);
-  const skillTitleRef = useRef(null);
-  const skillsContainerRef = useRef(null);
-
-  const skills = [
-    { id: "htmlicon", name: "HTML", image: "html3.png" },
-    { id: "cssicon", name: "CSS", image: "css.png" },
-    { id: "jsicon", name: "JAVASCRIPT", image: "js.jpeg" },
-    { id: "gsapicon", name: "GSAP", image: "gsap.png" },
-    { id: "reacticon", name: "REACT JS", image: "react6.png" },
-    { id: "githubicon", name: "GITHUB", image: "github.png" },
-    { id: "mongodbicon", name: "MONGO DB", image: "mongodbicon.png" },
-    { id: "expressjsicon", name: "EXPRESS JS", image: "expressjsicon.png" },
-    { id: "bootstrapicon", name: "BOOTSTRAP", image: "bootstrapicon.png" },
-    { id: "tailwindicon", name: "TAILWIND", image: "tailwindicon.png" },
-  ];
+  const titleRef     = useRef(null);
+  const subtitleRef  = useRef(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Add a small delay to ensure other components are fully mounted
     const timer = setTimeout(() => {
-      // Override any CSS hiding for this component
-      gsap.set(containerRef.current, { opacity: 1, visibility: 'visible' });
+      gsap.set(containerRef.current, { opacity: 1, visibility: "visible" });
 
       const ctx = gsap.context(() => {
-        // Set initial state for all elements using container-scoped selectors
-        gsap.set(skillTitleRef.current, { opacity: 0, scale: 0 });
-        gsap.set(containerRef.current.querySelectorAll(".skills-item"), { opacity: 0, scale: 0 });
+        const el    = containerRef.current;
+        const cat   = el.querySelectorAll(".category-block");
+        const cards = el.querySelectorAll(".skill-card");
 
-        // Title animation - triggers when skills page enters viewport
-        gsap.to(skillTitleRef.current, {
-          opacity: 1,
-          scale: 1,
-          duration: 0.6,
-          ease: "back.out(1.7)",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 80%",
-            end: "top 20%",
-            toggleActions: "play none none none",
-            id: "skills-page-title-animation",
-            refreshPriority: 1, // Lower priority to avoid conflicts
+        gsap.set([titleRef.current, subtitleRef.current], { opacity: 0, y: 30 });
+        gsap.set(cat,   { opacity: 0, y: 24 });
+        gsap.set(cards, { opacity: 0, scale: 0.94 });
+
+        gsap.to(titleRef.current, {
+          opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 80%", toggleActions: "play none none none", id: "sk-title" },
+        });
+        gsap.to(subtitleRef.current, {
+          opacity: 1, y: 0, duration: 0.6, ease: "power3.out", delay: 0.15,
+          scrollTrigger: { trigger: el, start: "top 80%", toggleActions: "play none none none", id: "sk-sub" },
+        });
+        gsap.to(cat, {
+          opacity: 1, y: 0, duration: 0.55, ease: "power2.out",
+          stagger: { amount: 0.5, from: "start" },
+          scrollTrigger: { trigger: el, start: "top 72%", toggleActions: "play none none none", id: "sk-cats" },
+        });
+        gsap.to(cards, {
+          opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.4)",
+          stagger: { amount: 0.9, from: "start" },
+          scrollTrigger: { trigger: el, start: "top 68%", toggleActions: "play none none none", id: "sk-cards" },
+        });
+
+        ScrollTrigger.create({
+          trigger: el, start: "top 68%", id: "sk-bars",
+          onEnter: () => {
+            el.querySelectorAll(".skill-bar").forEach((bar) => {
+              gsap.to(bar, { width: `${bar.dataset.target}%`, duration: 1.1, ease: "power2.out", delay: 0.4 });
+            });
+            el.querySelectorAll(".skill-pct").forEach((pct) => {
+              const target = parseFloat(pct.dataset.target);
+              const obj = { val: 0 };
+              gsap.to(obj, {
+                val: target, duration: 1.1, ease: "power2.out", delay: 0.4,
+                onUpdate: () => { pct.textContent = `${Math.round(obj.val)}%`; },
+              });
+            });
           },
         });
 
-        // Skills animation - all items animate together when container is in view
-        const skillItems = containerRef.current.querySelectorAll(".skills-item");
-        if (skillItems.length > 0) {
-          gsap.to(skillItems, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.5,
-            ease: "back.out(1.2)",
-            stagger: {
-              amount: 0.8, // Total time for all animations
-              from: "start",
-            },
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: "top 70%",
-              end: "bottom 30%",
-              toggleActions: "play none none none",
-              id: "skills-page-items-stagger-animation",
-              refreshPriority: 1, // Lower priority to avoid conflicts
-            },
-          });
-        }
-
-        // Refresh ScrollTrigger after setup to ensure proper positioning
         ScrollTrigger.refresh();
       }, containerRef);
 
       return () => {
         ctx.revert();
-        // Kill only our specific ScrollTriggers
-        ScrollTrigger.getAll().forEach((trigger) => {
-          if (trigger.vars && (
-            trigger.vars.id === "skills-page-title-animation" || 
-            trigger.vars.id === "skills-page-items-stagger-animation"
-          )) {
-            trigger.kill();
-          }
-        });
+        ScrollTrigger.getAll()
+          .filter((t) => t.vars?.id?.startsWith("sk-"))
+          .forEach((t) => t.kill());
       };
-    }, 100); // Small delay to avoid conflicts
+    }, 100);
 
-    return () => {
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <section id="skillsPage">
-    <div ref={containerRef} className="h-screen w-full bg-[#0C090D] overflow-hidden flex flex-col">
-      {/* Skills Title */}
       <div
-        ref={skillTitleRef}
-        className="text-white font-orbitron text-center flex-shrink-0"
-        style={{
-          fontSize: "5vmax",
-          fontWeight: 300,
-          paddingTop: "2vh",
-          paddingBottom: "1vh",
-        }}
+        ref={containerRef}
+        className="relative min-h-screen w-full overflow-hidden"
+        style={{ background: "#0C090D" }}
       >
-        SKILLS
-      </div>
+        {/* ── Background ── */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%)", filter: "blur(60px)" }}
+          />
+          <div
+            className="absolute -bottom-48 -right-24 h-[420px] w-[420px] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)", filter: "blur(70px)" }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
+            }}
+          />
+        </div>
 
-      {/* Skills Container with Glassmorphism */}
-      <div className="relative flex-1 mx-4 md:mx-8 lg:mx-16 mb-4 overflow-hidden">
-        {/* Glassmorphism Background */}
-        <div
-          className="absolute inset-0 backdrop-blur-sm border border-gray-700/20 rounded-lg"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.02)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
-          }}
-        ></div>
-
-        {/* Skills Grid */}
-        <div
-          ref={skillsContainerRef}
-          className="relative z-10 h-full flex flex-wrap justify-center content-center items-center p-2 md:p-4 lg:ml-[85px]"
-          style={{
-            gap: "0.75rem",
-          }}
-        >
-          {skills.map((skill, index) => {
-            return (
+        {/* ── Content ── */}
+        <div className="relative z-10 flex flex-col items-center px-4 pb-20 pt-14 sm:px-8 md:px-12 lg:px-20">
+          <div className="mb-12 flex flex-col items-center gap-3 text-center">
             <div
-              key={skill.id}
-              className="skills-item flex flex-col bg-[#834a97] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-[calc(50%-0.375rem)] sm:w-[calc(33.333%-0.5rem)] md:w-[calc(25%-0.5625rem)] lg:w-[10vw] h-[calc(50vw/2.2)] sm:h-[calc(33.333vw/1.8)] md:h-[calc(25vw/1.8)] lg:h-[10vw]"
-              style={{
-                minHeight: "90px",
-                minWidth: "90px",
-                maxHeight: "140px",
-                maxWidth: "140px",
-              }}
+              ref={titleRef}
+              className="font-orbitron uppercase tracking-[0.25em] text-white"
+              style={{ fontSize: "clamp(32px, 5.5vw, 62px)", fontWeight: 300 }}
             >
-              {/* Skill Icon */}
-              <div
-                className="bg-[#0C090D] flex-1 bg-cover bg-center p-2 sm:p-3 md:p-4"
-                style={{
-                  backgroundImage: `url(${skill.image})`,
-                  backgroundSize: skill.id === "reacticon" ? "auto" : "cover",
-                  minHeight: "50px",
-                }}
-              ></div>
-
-              {/* Skill Name */}
-              <div className="bg-[#0C090D] flex justify-center items-center font-orbitron text-white text-center px-1 py-1">
-                <span
-                  className="leading-tight text-[2.5vw] sm:text-[1.8vw] md:text-[1.5vw] lg:text-[1.2vw]"
-                  style={{
-                    fontWeight: 400,
-                    height: "25px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    textAlign: "center",
-                    lineHeight: "1.1",
-                    minFontSize: "10px",
-                    maxFontSize: "14px",
-                  }}
-                >
-                  {skill.name}
-                </span>
-              </div>
+              SKILLS
             </div>
-            );
-          })}
+            <div
+              ref={subtitleRef}
+              className="font-mono uppercase tracking-widest"
+              style={{ fontSize: "clamp(10px, 1.2vw, 13px)", color: "rgba(255,255,255,0.3)", letterSpacing: "0.3em" }}
+            >
+              technologies &amp; proficiencies
+            </div>
+            <div
+              className="mt-2 h-px w-28"
+              style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)" }}
+            />
+          </div>
+
+          <div className="w-full max-w-5xl flex flex-col gap-10">
+            {SKILL_CATEGORIES.map((cat) => (
+              <CategoryBlock key={cat.id} category={cat} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </section>
   );
 };
