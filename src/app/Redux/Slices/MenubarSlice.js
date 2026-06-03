@@ -3,7 +3,7 @@ import {createSlice} from '@reduxjs/toolkit'
 const MenubarSlice = createSlice({
     name:"menubar",
     initialState:{
-        isMenubarOpen : false
+        isMenubarOpen : true
     },
     reducers:{
         toggleMenubar : (state,action)=>{
