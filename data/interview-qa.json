@@ -14,5 +14,13 @@
     "category": "DBMS",
     "topic": "Normalization (1NF, 2NF, 3NF)",
     "date": "2026-08-04"
+  },
+  {
+    "id": "2026-08-04-what-is-the-primary-difference-between-http-and-https-and-how-does-https-achieve-its-added-security",
+    "question": "What is the primary difference between HTTP and HTTPS, and how does HTTPS achieve its added security?",
+    "answer": "HTTP transmits data in plain text, making it vulnerable to interception and tampering, whereas HTTPS encrypts all communication using SSL or TLS protocols. HTTPS achieves this security by performing a cryptographic handshake that establishes a secure, encrypted tunnel between the browser and the web server, ensuring data privacy and integrity.",
+    "category": "CN",
+    "topic": "HTTP vs HTTPS",
+    "date": "2026-08-04"
   }
 ]
