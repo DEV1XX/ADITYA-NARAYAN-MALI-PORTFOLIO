@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "2026-08-04-what-happens-when-you-type-a-url-in-the-browser-and-press-enter",
+    "question": "What happens when you type a URL in the browser and press Enter?",
+    "answer": "The browser first checks its local cache and the operating system to resolve the domain name into an IP address using DNS. It then establishes a TCP connection with the destination server via a three-way handshake, followed by a TLS handshake for secure HTTPS traffic. Finally, the browser sends an HTTP GET request to fetch the webpage resources, which it then parses and renders on the screen.",
+    "category": "CN",
+    "topic": "What happens when you type a URL in the browser",
+    "date": "2026-08-04"
+  }
+]
