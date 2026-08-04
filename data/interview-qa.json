@@ -6,5 +6,13 @@
     "category": "CN",
     "topic": "What happens when you type a URL in the browser",
     "date": "2026-08-04"
+  },
+  {
+    "id": "2026-08-04-what-is-the-difference-between-2nf-and-3nf-in-database-normalization",
+    "question": "What is the difference between 2NF and 3NF in database normalization?",
+    "answer": "A table is in 2NF if it is in 1NF and has no partial dependencies, meaning all non-key attributes are fully dependent on the primary key. A table is in 3NF if it is in 2NF and has no transitive dependencies, meaning non-key attributes depend only on the primary key and not on other non-key attributes.",
+    "category": "DBMS",
+    "topic": "Normalization (1NF, 2NF, 3NF)",
+    "date": "2026-08-04"
   }
 ]
