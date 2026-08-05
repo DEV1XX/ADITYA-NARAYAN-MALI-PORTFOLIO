@@ -30,5 +30,13 @@
     "category": "DBMS",
     "topic": "Normalization (1NF, 2NF, 3NF)",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-what-is-the-primary-difference-between-client-side-rendering-and-server-side-rendering-and-when-would-you-choose-one-over-the-other",
+    "question": "What is the primary difference between client-side rendering and server-side rendering, and when would you choose one over the other?",
+    "answer": "Client-side rendering loads a minimal HTML page and uses JavaScript in the browser to render content, making it great for highly interactive applications after the initial load. Server-side rendering generates the full HTML on the server for every request, which ensures faster initial page loads and better search engine optimization. You should choose client-side rendering for rich web dashboards and server-side rendering for content-heavy sites like blogs or e-commerce stores.",
+    "category": "Web Dev",
+    "topic": "Client-Side vs Server-Side Rendering",
+    "date": "2026-08-05"
   }
 ]
