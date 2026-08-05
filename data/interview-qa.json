@@ -38,5 +38,13 @@
     "category": "Web Dev",
     "topic": "Client-Side vs Server-Side Rendering",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-what-is-the-difference-between-memoization-and-tabulation-in-dynamic-programming",
+    "question": "What is the difference between Memoization and Tabulation in Dynamic Programming?",
+    "answer": "Memoization is a top-down approach where you solve the problem recursively and store the results of overlapping subproblems in a cache to avoid redundant calculations. Tabulation is a bottom-up approach that iteratively fills up a table from the base cases up to the final solution. While both achieve the same time complexity, tabulation avoids recursion overhead and potential stack overflow issues.",
+    "category": "DSA",
+    "topic": "Dynamic Programming basics",
+    "date": "2026-08-05"
   }
 ]
