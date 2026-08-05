@@ -70,5 +70,13 @@
     "category": "Web Dev",
     "topic": "CORS and why it exists",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-how-does-the-browser-use-preflight-requests-to-enforce-cors-security-when-a-client-performs-a-cross-origin-mutation",
+    "question": "How does the browser use preflight requests to enforce CORS security when a client performs a cross-origin mutation?",
+    "answer": "Before sending a potentially unsafe cross-origin request like a PUT or DELETE, the browser automatically sends an HTTP OPTIONS request to check if the server allows the actual origin and method. If the server responds with the appropriate Access-Control headers, the browser proceeds with the real request; otherwise, it blocks the operation to protect user data.",
+    "category": "Web Dev",
+    "topic": "CORS and why it exists",
+    "date": "2026-08-05"
   }
 ]
