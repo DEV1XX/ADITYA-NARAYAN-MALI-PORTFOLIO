@@ -62,5 +62,13 @@
     "category": "CN",
     "topic": "TCP vs UDP",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-what-is-cors-and-why-does-it-exist-in-modern-web-browsers",
+    "question": "What is CORS, and why does it exist in modern web browsers?",
+    "answer": "CORS stands for Cross-Origin Resource Sharing, a security mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading resources. It exists to enforce the Same-Origin Policy, preventing malicious websites from reading sensitive data from another domain without explicit authorization.",
+    "category": "Web Dev",
+    "topic": "CORS and why it exists",
+    "date": "2026-08-05"
   }
 ]
