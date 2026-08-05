@@ -22,5 +22,13 @@
     "category": "CN",
     "topic": "HTTP vs HTTPS",
     "date": "2026-08-04"
+  },
+  {
+    "id": "2026-08-05-why-is-first-normal-form-1nf-important-in-database-design-and-what-condition-must-a-table-satisfy-to-achieve-it",
+    "question": "Why is First Normal Form (1NF) important in database design, and what condition must a table satisfy to achieve it?",
+    "answer": "First Normal Form eliminates data redundancy and structural ambiguity by ensuring that every column contains only atomic, indivisible values and that each record is unique. To achieve 1NF, a relation must contain no repeating groups or arrays, meaning every cell in the table must hold a single value rather than a set or list.",
+    "category": "DBMS",
+    "topic": "Normalization (1NF, 2NF, 3NF)",
+    "date": "2026-08-05"
   }
 ]
