@@ -78,5 +78,13 @@
     "category": "Web Dev",
     "topic": "CORS and why it exists",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-what-is-the-difference-between-method-overloading-and-method-overriding-in-object-oriented-programming",
+    "question": "What is the difference between method overloading and method overriding in object-oriented programming?",
+    "answer": "Method overloading occurs when multiple methods in the same class share the same name but have different parameters, happening at compile-time within the same class. Method overriding happens when a subclass provides a specific implementation of a method that is already defined in its parent class, happening at runtime through inheritance.",
+    "category": "OOPs",
+    "topic": "Method Overloading vs Overriding",
+    "date": "2026-08-05"
   }
 ]
