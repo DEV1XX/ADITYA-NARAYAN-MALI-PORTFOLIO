@@ -54,5 +54,13 @@
     "category": "Web Dev",
     "topic": "Client-Side vs Server-Side Rendering",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-what-are-the-primary-differences-between-tcp-and-udp-and-when-would-you-choose-one-over-the-other",
+    "question": "What are the primary differences between TCP and UDP, and when would you choose one over the other?",
+    "answer": "TCP is a connection-oriented, reliable protocol that guarantees ordered delivery of data through error checking and retransmissions, making it ideal for file transfers and web browsing. UDP is a connectionless, unreliable protocol with lower overhead and no retransmissions, making it better suited for real-time applications like video streaming and online gaming where speed matters more than occasional packet loss.",
+    "category": "CN",
+    "topic": "TCP vs UDP",
+    "date": "2026-08-05"
   }
 ]
