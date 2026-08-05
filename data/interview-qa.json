@@ -46,5 +46,13 @@
     "category": "DSA",
     "topic": "Dynamic Programming basics",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-05-how-does-server-side-rendering-ssr-impact-initial-page-load-performance-compared-to-client-side-rendering-csr-and-what-causes-this-difference",
+    "question": "How does Server-Side Rendering (SSR) impact Initial Page Load performance compared to Client-Side Rendering (CSR), and what causes this difference?",
+    "answer": "SSR generally provides a faster Initial Page Load and better SEO because the server sends a fully rendered HTML document that the browser can display immediately. In contrast, CSR sends a minimal HTML shell with JavaScript bundles, meaning the user sees a blank or loading screen until the browser downloads, parses, and executes the scripts to render the content.",
+    "category": "Web Dev",
+    "topic": "Client-Side vs Server-Side Rendering",
+    "date": "2026-08-05"
   }
 ]
