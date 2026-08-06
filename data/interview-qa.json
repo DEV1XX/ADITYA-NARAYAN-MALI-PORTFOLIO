@@ -86,5 +86,13 @@
     "category": "OOPs",
     "topic": "Method Overloading vs Overriding",
     "date": "2026-08-05"
+  },
+  {
+    "id": "2026-08-06-what-is-the-model-context-protocol-mcp-and-why-is-it-important-in-generative-ai",
+    "question": "What is the Model Context Protocol (MCP) and why is it important in Generative AI?",
+    "answer": "Model Context Protocol is an open standard developed by Anthropic that allows AI models to securely connect with external data sources, tools, and workflows. It is important because it standardizes how large language models access real-time information and enterprise data without requiring custom integrations for every new data source.",
+    "category": "Gen AI",
+    "topic": "What is Model Context Protocol (MCP)",
+    "date": "2026-08-06"
   }
 ]
