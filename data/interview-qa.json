@@ -94,5 +94,13 @@
     "category": "Gen AI",
     "topic": "What is Model Context Protocol (MCP)",
     "date": "2026-08-06"
+  },
+  {
+    "id": "2026-08-07-during-runtime-polymorphism-via-method-overriding-how-does-the-java-virtual-machine-determine-which-version-of-the-method-to-execute",
+    "question": "During runtime polymorphism via method overriding, how does the Java Virtual Machine determine which version of the method to execute?",
+    "answer": "The JVM uses dynamic method dispatch at runtime, where the actual execution is determined by the runtime type of the object rather than the reference type. When a method is overridden, the JVM looks up the object's actual class in the virtual method table and invokes that specific implementation.",
+    "category": "OOPs",
+    "topic": "Method Overloading vs Overriding",
+    "date": "2026-08-07"
   }
 ]
