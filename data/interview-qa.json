@@ -102,5 +102,13 @@
     "category": "OOPs",
     "topic": "Method Overloading vs Overriding",
     "date": "2026-08-07"
+  },
+  {
+    "id": "2026-08-08-at-which-layer-of-the-osi-model-does-https-operate-and-what-specific-protocol-is-responsible-for-establishing-its-secure-connection",
+    "question": "At which layer of the OSI model does HTTPS operate, and what specific protocol is responsible for establishing its secure connection?",
+    "answer": "HTTPS operates at the Application layer, similar to HTTP, but it adds a layer of security by running over TLS (Transport Layer Security), formerly known as SSL. This cryptographic protocol handles the initial handshake, certificate verification, and key exchange directly on top of TCP at the Transport layer before any HTTP application data is transmitted.",
+    "category": "CN",
+    "topic": "HTTP vs HTTPS",
+    "date": "2026-08-08"
   }
 ]
