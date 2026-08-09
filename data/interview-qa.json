@@ -110,5 +110,13 @@
     "category": "CN",
     "topic": "HTTP vs HTTPS",
     "date": "2026-08-08"
+  },
+  {
+    "id": "2026-08-09-when-is-it-appropriate-to-use-dynamic-programming-to-solve-a-problem-and-what-two-core-properties-must-the-problem-possess",
+    "question": "When is it appropriate to use Dynamic Programming to solve a problem, and what two core properties must the problem possess?",
+    "answer": "Dynamic Programming should be used when a problem can be broken down into simpler subproblems and solving it requires reusing the results of those subproblems. To be eligible, the problem must possess optimal substructure, meaning the optimal solution can be constructed from optimal solutions of its subproblems, and overlapping subproblems, meaning the same subproblems are solved repeatedly during the computation.",
+    "category": "DSA",
+    "topic": "Dynamic Programming basics",
+    "date": "2026-08-09"
   }
 ]
