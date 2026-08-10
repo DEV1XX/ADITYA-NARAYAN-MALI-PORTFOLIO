@@ -118,5 +118,13 @@
     "category": "DSA",
     "topic": "Dynamic Programming basics",
     "date": "2026-08-09"
+  },
+  {
+    "id": "2026-08-10-given-a-relation-in-1nf-what-specific-condition-must-be-met-to-upgrade-it-to-2nf-and-what-type-of-dependency-does-2nf-eliminate",
+    "question": "Given a relation in 1NF, what specific condition must be met to upgrade it to 2NF, and what type of dependency does 2NF eliminate?",
+    "answer": "To achieve 2NF, the relation must already be in 1NF and have no partial dependencies, meaning all non-key attributes must be fully functionally dependent on the entire primary key. It eliminates partial dependencies where a non-key column depends on only a proper subset of a composite primary key.",
+    "category": "DBMS",
+    "topic": "Normalization (1NF, 2NF, 3NF)",
+    "date": "2026-08-10"
   }
 ]
