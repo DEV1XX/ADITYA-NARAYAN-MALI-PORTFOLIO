@@ -11,6 +11,24 @@ if (typeof window !== "undefined") {
 // ─── PROJECT DATA ──────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
+    id: "agentq",
+    title: "AGENTQ",
+    description:
+      "A multi-agent RAG pipeline for autonomous content generation and publishing, powered by LangGraph.js, Qdrant, MCP, and GitHub Actions.",
+    techStack: [
+      "LangGraph.js",
+      "TypeScript",
+      "Qdrant",
+      "MCP",
+      "Docker",
+      "GitHub Actions",
+      "Next.js",
+    ],
+    link: "https://github.com/DEV1XX/AgentQ",
+    status: "Live",
+    screenshot: "/agentq-preview.png",
+  },
+  {
     id: "db-buddy",
     title: "DB BUDDY",
     description:
@@ -40,28 +58,31 @@ const PROJECTS = [
     status: "Live",
     screenshot: "/desidelicacy-preview.png",
   },
-  {
-    id: "animatedportfolio",
-    title: "ANIMATED PORTFOLIO",
-    description:
-      "A stunning animated portfolio website showcasing smooth transitions, interactive elements, and modern web design principles.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "GSAP", "Animations"],
-    link: "",
-    status: "Live",
-    screenshot: "/portfolio-preview.png",
-  },
-  {
-    id: "netflixclone",
-    title: "NETFLIX CSS CLONE",
-    description:
-      "A pixel-perfect Netflix interface clone demonstrating advanced CSS skills, responsive design, and attention to detail.",
-    techStack: ["HTML5", "CSS3", "Responsive Design", "Flexbox", "Grid"],
-    link: "https://netflix-css-clone-aditya-git-main-dev1xxs-projects.vercel.app/",
-    status: "Live",
-    screenshot:
-      "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&h=600&fit=crop",
-  },
+  // {
+  //   id: "animatedportfolio",
+  //   title: "ANIMATED PORTFOLIO",
+  //   description:
+  //     "A stunning animated portfolio website showcasing smooth transitions, interactive elements, and modern web design principles.",
+  //   techStack: ["HTML5", "CSS3", "JavaScript", "GSAP", "Animations"],
+  //   link: "",
+  //   status: "Live",
+  //   screenshot: "/portfolio-preview.png",
+  // },
+  // {
+  //   id: "netflixclone",
+  //   title: "NETFLIX CSS CLONE",
+  //   description:
+  //     "A pixel-perfect Netflix interface clone demonstrating advanced CSS skills, responsive design, and attention to detail.",
+  //   techStack: ["HTML5", "CSS3", "Responsive Design", "Flexbox", "Grid"],
+  //   link:
+  //     "https://netflix-css-clone-aditya-git-main-dev1xxs-projects.vercel.app/",
+  //   status: "Live",
+  //   screenshot:
+  //     "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&h=600&fit=crop",
+  // },
 ];
+
+
 
 // ─── PROJECT CARD ──────────────────────────────────────────────────────────────
 function ProjectCard({ project }) {

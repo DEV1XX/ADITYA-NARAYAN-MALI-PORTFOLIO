@@ -18,12 +18,12 @@ const SKILL_CATEGORIES = [
     barTo: "#cbd5e1",
   },
   {
-    id: "frameworks",
-    label: "Libraries / Frameworks",
-    accent: "#cbd5e1",
-    accentDim: "#64748b10",
-    barFrom: "#475569",
-    barTo: "#e2e8f0",
+    id: "agentic",
+    label: "Agentic AI / GenAI",
+    accent: "#e2e8f0",
+    accentDim: "#94a3b812",
+    barFrom: "#64748b",
+    barTo: "#cbd5e1",
   },
   {
     id: "databases",
@@ -42,6 +42,14 @@ const SKILL_CATEGORIES = [
     barTo: "#cbd5e1",
   },
   {
+    id: "frameworks",
+    label: "Libraries / Frameworks",
+    accent: "#cbd5e1",
+    accentDim: "#64748b10",
+    barFrom: "#475569",
+    barTo: "#e2e8f0",
+  },
+  {
     id: "tools",
     label: "Tools / Platforms",
     accent: "#f8fafc",
@@ -58,18 +66,13 @@ SKILL_CATEGORIES[0].items = [
   { id: "python",  name: "Python",  proficiency: 75 },
 ];
 SKILL_CATEGORIES[1].items = [
-  { id: "htmlcss",  name: "HTML & CSS",   proficiency: 95 },
-  { id: "react",    name: "React JS",        proficiency: 95 },
-  { id: "nextjs",   name: "Next.js",      proficiency: 90 },
-  { id: "tailwind", name: "Tailwind CSS", proficiency: 95 },
-  { id: "nodejs",   name: "Node JS",      proficiency: 78 },
-  { id: "express",  name: "Express JS",   proficiency: 75 },
-  { id: "redux",    name: "Redux",        proficiency: 85 },
-];
-SKILL_CATEGORIES[4].items = [
-  { id: "github", name: "GitHub", proficiency: 88 },
-  { id: "git",    name: "Git",    proficiency: 85 },
-  { id: "vscode", name: "VSCode", proficiency: 92 },
+  { id: "langgraph",  name: "LangGraph",                              proficiency: 80 },
+  { id: "langchain",  name: "LangChain",                              proficiency: 80 },
+  { id: "rag",         name: "RAG",                                    proficiency: 80 },
+  { id: "vectordb",   name: "Vector Databases [ Qdrant ]",            proficiency: 75 },
+  { id: "mcp",         name: "Model Context Protocol (MCP)",           proficiency: 88 },
+  { id: "llmapis",    name: "LLM APIs [ OpenAI, Gemini ]",            proficiency: 90 },
+  { id: "promptEng",  name: "Prompt Engineering",                      proficiency: 90 },
 ];
 SKILL_CATEGORIES[2].items = [
   { id: "sql",     name: "SQL",     proficiency: 72 },
@@ -78,6 +81,20 @@ SKILL_CATEGORIES[2].items = [
 SKILL_CATEGORIES[3].items = [
   { id: "paymentGateway",   name: "Payment Gateways [ Stripe, Razorpay ]",        proficiency: 90 },
   { id: "aiapi",   name: "AI APIs [ OpenAI, Gemini ]",        proficiency: 95 },
+];
+SKILL_CATEGORIES[4].items = [
+  { id: "htmlcss",  name: "HTML & CSS",   proficiency: 95 },
+  { id: "react",    name: "React JS",        proficiency: 95 },
+  { id: "nextjs",   name: "Next.js",      proficiency: 90 },
+  { id: "tailwind", name: "Tailwind CSS", proficiency: 95 },
+  { id: "nodejs",   name: "Node JS",      proficiency: 78 },
+  { id: "express",  name: "Express JS",   proficiency: 75 },
+  { id: "redux",    name: "Redux",        proficiency: 85 },
+];
+SKILL_CATEGORIES[5].items = [
+  { id: "github", name: "GitHub", proficiency: 88 },
+  { id: "git",    name: "Git",    proficiency: 85 },
+  { id: "vscode", name: "VSCode", proficiency: 92 },
 ];
 
 

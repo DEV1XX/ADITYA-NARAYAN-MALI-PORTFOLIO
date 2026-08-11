@@ -11,8 +11,8 @@ const NAV_LINKS = [
   { text: 'Skills',           id: '#skillsPage' },
   { text: 'Projects',         id: '#projectsPage' },
   { text: 'Contact Me',       id: '#contactPage' },
-  { text: 'My Resume',        href: 'https://drive.google.com/file/d/1pg6oSDZIoqyiozs6_h3gtO1YOesnFHbj/view?usp=drive_link', newTab: true },
-  { text: 'Download Resume',  href: '/resume-aditya-narayan-mali.pdf', download: true },
+  { text: 'My Resume',        href: 'https://drive.google.com/file/d/1Nbn86aZI3c-QdyJNGZ1MbefTZq0zXi6A/view?usp=drive_link', newTab: true },
+  { text: 'Download Resume',  href: '/Aditya_Narayan_Mali_Resume_v2 (1).pdf', download: true },
 ];
 
 const Menubar = () => {
