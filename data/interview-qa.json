@@ -126,5 +126,13 @@
     "category": "DBMS",
     "topic": "Normalization (1NF, 2NF, 3NF)",
     "date": "2026-08-10"
+  },
+  {
+    "id": "2026-08-11-what-is-the-fundamental-difference-in-data-structure-and-scaling-between-sql-and-nosql-databases",
+    "question": "What is the fundamental difference in data structure and scaling between SQL and NoSQL databases?",
+    "answer": "SQL databases are relational, using structured schemas with tables and rows, and they scale vertically by upgrading hardware. NoSQL databases are non-relational, accommodating unstructured or semi-structured data like documents or key-values, and they scale horizontally by adding more servers to a distributed network.",
+    "category": "DBMS",
+    "topic": "SQL vs NoSQL tradeoffs",
+    "date": "2026-08-11"
   }
 ]
