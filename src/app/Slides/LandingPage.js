@@ -8,8 +8,8 @@ import { gsap } from 'gsap';
 const SKILLS = [
   { label: 'Frontend' },
   { label: 'Backend' },
-  { label: 'Animated Websites', hideOnMobile: true },
   { label: 'DSA' },
+  { label: 'GEN-AI & AI AGENTS' },
 ];
 
 export const LandingPage = () => {
