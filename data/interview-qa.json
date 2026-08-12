@@ -134,5 +134,13 @@
     "category": "DBMS",
     "topic": "SQL vs NoSQL tradeoffs",
     "date": "2026-08-11"
+  },
+  {
+    "id": "2026-08-12-how-does-the-browser-locate-the-correct-servers-ip-address-after-you-type-a-url-and-what-happens-if-that-address-is-not-cached-locally",
+    "question": "How does the browser locate the correct server's IP address after you type a URL, and what happens if that address is not cached locally?",
+    "answer": "The browser first checks its local caches including the OS and router levels to resolve the domain name to an IP address. If the IP is not found locally, it queries a Recursive DNS Resolver, which traverses the DNS hierarchy from root servers to TLD and authoritative name servers to retrieve the correct address.",
+    "category": "CN",
+    "topic": "What happens when you type a URL in the browser",
+    "date": "2026-08-12"
   }
 ]
