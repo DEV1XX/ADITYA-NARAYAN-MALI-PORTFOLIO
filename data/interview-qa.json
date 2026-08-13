@@ -142,5 +142,13 @@
     "category": "CN",
     "topic": "What happens when you type a URL in the browser",
     "date": "2026-08-12"
+  },
+  {
+    "id": "2026-08-13-what-is-the-primary-difference-between-session-based-authentication-and-json-web-tokens-jwt",
+    "question": "What is the primary difference between session-based authentication and JSON Web Tokens (JWT)?",
+    "answer": "Session-based authentication is stateful, meaning the server stores user session data in memory or a database and sends a session ID cookie to the client. In contrast, JWT is stateless, meaning all user data and claims are cryptographically signed and stored entirely within the token on the client side, requiring no server-side session storage.",
+    "category": "Web Dev",
+    "topic": "Authentication: Sessions vs JWT",
+    "date": "2026-08-13"
   }
 ]
