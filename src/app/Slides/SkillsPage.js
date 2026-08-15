@@ -8,96 +8,64 @@ if (typeof window !== "undefined") {
 }
 
 // ─── SKILL DATA ────────────────────────────────────────────────────────────────
+// proficiency: category-level overall score (0–100)
+// items: flat list of skill name tags — no individual levels
 const SKILL_CATEGORIES = [
   {
     id: "languages",
     label: "Programming Languages",
-    accent: "#e2e8f0",
-    accentDim: "#94a3b812",
+    proficiency: 85,
     barFrom: "#64748b",
     barTo: "#cbd5e1",
+    items: ["C", "C++", "JavaScript", "Python"],
   },
   {
     id: "agentic",
     label: "Agentic AI / GenAI",
-    accent: "#e2e8f0",
-    accentDim: "#94a3b812",
+    proficiency: 85,
     barFrom: "#64748b",
     barTo: "#cbd5e1",
-  },
-  {
-    id: "databases",
-    label: "Databases",
-    accent: "#d1d5db",
-    accentDim: "#6b728010",
-    barFrom: "#4b5563",
-    barTo: "#e5e7eb",
-  },
-  {
-    id: "integrations",
-    label: "Integrations",
-    accent: "#e2e8f0",
-    accentDim: "#94a3b812",
-    barFrom: "#64748b",
-    barTo: "#cbd5e1",
+    items: [
+      "LangGraph", "LangChain", "RAG",
+      "Vector Databases · Qdrant",
+      "Model Context Protocol (MCP)",
+      "LLM APIs · OpenAI · Gemini",
+      "Prompt Engineering",
+    ],
   },
   {
     id: "frameworks",
     label: "Libraries / Frameworks",
-    accent: "#cbd5e1",
-    accentDim: "#64748b10",
+    proficiency: 88,
     barFrom: "#475569",
     barTo: "#e2e8f0",
+    items: ["HTML & CSS", "React JS", "Next.js", "Tailwind CSS", "Node JS", "Express JS", "Redux"],
+  },
+  {
+    id: "integrations",
+    label: "Integrations",
+    proficiency: 92,
+    barFrom: "#64748b",
+    barTo: "#cbd5e1",
+    items: ["Stripe", "Razorpay", "LLM API(OpenAI, Gemini, Groq)", ],
+  },
+  {
+    id: "databases",
+    label: "Databases",
+    proficiency: 76,
+    barFrom: "#4b5563",
+    barTo: "#e5e7eb",
+    items: ["SQL", "MongoDB"],
   },
   {
     id: "tools",
     label: "Tools / Platforms",
-    accent: "#f8fafc",
-    accentDim: "#94a3b80e",
+    proficiency: 88,
     barFrom: "#64748b",
     barTo: "#f1f5f9",
+    items: ["GitHub", "Git", "VSCode"],
   },
 ];
-
-SKILL_CATEGORIES[0].items = [
-  { id: "c",   name: "C",           proficiency: 85 },
-  { id: "cpp", name: "C++",         proficiency: 70 },
-  { id: "js",  name: "JavaScript",  proficiency: 90 },
-  { id: "python",  name: "Python",  proficiency: 75 },
-];
-SKILL_CATEGORIES[1].items = [
-  { id: "langgraph",  name: "LangGraph",                              proficiency: 80 },
-  { id: "langchain",  name: "LangChain",                              proficiency: 80 },
-  { id: "rag",         name: "RAG",                                    proficiency: 80 },
-  { id: "vectordb",   name: "Vector Databases [ Qdrant ]",            proficiency: 75 },
-  { id: "mcp",         name: "Model Context Protocol (MCP)",           proficiency: 88 },
-  { id: "llmapis",    name: "LLM APIs [ OpenAI, Gemini ]",            proficiency: 90 },
-  { id: "promptEng",  name: "Prompt Engineering",                      proficiency: 90 },
-];
-SKILL_CATEGORIES[2].items = [
-  { id: "sql",     name: "SQL",     proficiency: 72 },
-  { id: "mongodb", name: "MongoDB", proficiency: 80 },
-];
-SKILL_CATEGORIES[3].items = [
-  { id: "paymentGateway",   name: "Payment Gateways [ Stripe, Razorpay ]",        proficiency: 90 },
-  { id: "aiapi",   name: "AI APIs [ OpenAI, Gemini ]",        proficiency: 95 },
-];
-SKILL_CATEGORIES[4].items = [
-  { id: "htmlcss",  name: "HTML & CSS",   proficiency: 95 },
-  { id: "react",    name: "React JS",        proficiency: 95 },
-  { id: "nextjs",   name: "Next.js",      proficiency: 90 },
-  { id: "tailwind", name: "Tailwind CSS", proficiency: 95 },
-  { id: "nodejs",   name: "Node JS",      proficiency: 78 },
-  { id: "express",  name: "Express JS",   proficiency: 75 },
-  { id: "redux",    name: "Redux",        proficiency: 85 },
-];
-SKILL_CATEGORIES[5].items = [
-  { id: "github", name: "GitHub", proficiency: 88 },
-  { id: "git",    name: "Git",    proficiency: 85 },
-  { id: "vscode", name: "VSCode", proficiency: 92 },
-];
-
-
 
 function proficiencyLabel(pct) {
   if (pct >= 90) return "Expert";
@@ -106,111 +74,82 @@ function proficiencyLabel(pct) {
   return "Beginner";
 }
 
-// ─── SKILL CARD ────────────────────────────────────────────────────────────────
-function SkillCard({ skill, accent, accentDim, barFrom, barTo }) {
+// ─── CATEGORY BLOCK ────────────────────────────────────────────────────────────
+function CategoryBlock({ category }) {
   return (
-    <div
-      className="skill-card group relative flex flex-col gap-3 rounded-xl p-5 transition-all duration-300"
+    <div className="category-block relative rounded-xl p-6 sm:p-7 flex flex-col gap-5"
       style={{
         background: "rgba(255,255,255,0.02)",
         border: "1px solid rgba(255,255,255,0.05)",
       }}
     >
-      {/* Skill name + proficiency label */}
-      <div className="flex items-start justify-between gap-2">
-        <span
-          className="font-orbitron text-white leading-tight"
-          style={{ fontSize: "clamp(12px, 1.4vw, 15px)", fontWeight: 500, letterSpacing: "0.05em" }}
-        >
-          {skill.name}
-        </span>
-        <span
-          className="shrink-0 rounded-full px-2.5 py-1 font-mono"
-          style={{
-            fontSize: "clamp(9px, 1vw, 11px)",
-            color: "rgba(255,255,255,0.4)",
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            letterSpacing: "0.04em",
-          }}
-        >
-          {proficiencyLabel(skill.proficiency)}
-        </span>
-      </div>
-
-      {/* Progress bar track */}
+      {/* top accent line */}
       <div
-        className="relative w-full overflow-hidden rounded-full"
-        style={{ background: "rgba(255,255,255,0.08)", height: "2px" }}
-      >
-        <div
-          className="skill-bar absolute left-0 top-0 h-full rounded-full"
-          data-target={skill.proficiency}
-          style={{
-            width: "0%",
-            background: `linear-gradient(90deg, ${barFrom}, ${barTo})`,
-          }}
-        />
-      </div>
-
-      {/* Percentage */}
-      <div className="flex justify-end">
-        <span
-          className="skill-pct font-mono"
-          data-target={skill.proficiency}
-          style={{ fontSize: "clamp(9px, 0.95vw, 11px)", color: "rgba(255,255,255,0.25)" }}
-        >
-          0%
-        </span>
-      </div>
-
-      {/* Hover border brightening */}
-      <div
-        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+        className="absolute top-0 left-0 right-0 h-px rounded-t-xl"
+        style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)" }}
       />
-    </div>
-  );
-}
 
-// ─── CATEGORY BLOCK ────────────────────────────────────────────────────────────
-function CategoryBlock({ category }) {
-  return (
-    <div className="category-block flex flex-col gap-4">
-      <div className="flex items-center gap-3">
+      {/* Header row: label + proficiency badge + bar */}
+      <div className="flex flex-col gap-3">
+        <div className="flex items-center justify-between gap-3">
+          {/* Category label */}
+          <span
+            className="font-orbitron uppercase tracking-widest"
+            style={{ fontSize: "clamp(10px, 1.1vw, 13px)", color: "rgba(255,255,255,0.7)", fontWeight: 600 }}
+          >
+            {category.label}
+          </span>
+
+          {/* Proficiency badge */}
+          <span
+            className="shrink-0 rounded-full px-3 py-1 font-mono"
+            style={{
+              fontSize: "clamp(9px, 0.95vw, 11px)",
+              color: "rgba(255,255,255,0.5)",
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              letterSpacing: "0.04em",
+            }}
+          >
+            {proficiencyLabel(category.proficiency)} · <span className="cat-pct" data-target={category.proficiency}>0%</span>
+          </span>
+        </div>
+
+        {/* Progress bar */}
         <div
-          className="h-px flex-1"
-          style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.12), transparent)" }}
-        />
-        <span
-          className="font-orbitron shrink-0 uppercase tracking-widest"
-          style={{
-            fontSize: "clamp(10px, 1.1vw, 13px)",
-            color: "rgba(255,255,255,0.5)",
-            fontWeight: 600,
-          }}
+          className="relative w-full overflow-hidden rounded-full"
+          style={{ height: "1.5px", background: "rgba(255,255,255,0.07)" }}
         >
-          {category.label}
-        </span>
-        <div
-          className="h-px w-6 shrink-0"
-          style={{ background: "rgba(255,255,255,0.12)" }}
-        />
+          <div
+            className="cat-bar absolute left-0 top-0 h-full rounded-full"
+            data-target={category.proficiency}
+            style={{
+              width: "0%",
+              background: `linear-gradient(90deg, ${category.barFrom}, ${category.barTo})`,
+            }}
+          />
+        </div>
       </div>
 
-      <div
-        className="grid gap-3"
-        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(200px, 100%), 1fr))" }}
-      >
-        {category.items.map((skill) => (
-          <SkillCard
-            key={skill.id}
-            skill={skill}
-            accent={category.accent}
-            accentDim={category.accentDim}
-            barFrom={category.barFrom}
-            barTo={category.barTo}
-          />
+      {/* Divider */}
+      <div className="h-px" style={{ background: "rgba(255,255,255,0.05)" }} />
+
+      {/* Skill tags */}
+      <div className="flex flex-wrap gap-2">
+        {category.items.map((name) => (
+          <span
+            key={name}
+            className="font-mono rounded-md px-3 py-1.5 transition-colors duration-200"
+            style={{
+              fontSize: "clamp(10px, 0.95vw, 12px)",
+              color: "rgba(255,255,255,0.55)",
+              background: "rgba(255,255,255,0.03)",
+              border: "1px solid rgba(255,255,255,0.07)",
+              letterSpacing: "0.02em",
+            }}
+          >
+            {name}
+          </span>
         ))}
       </div>
     </div>
@@ -231,12 +170,10 @@ export const SkillsPage = () => {
 
       const ctx = gsap.context(() => {
         const el    = containerRef.current;
-        const cat   = el.querySelectorAll(".category-block");
-        const cards = el.querySelectorAll(".skill-card");
+        const cats  = el.querySelectorAll(".category-block");
 
         gsap.set([titleRef.current, subtitleRef.current], { opacity: 0, y: 30 });
-        gsap.set(cat,   { opacity: 0, y: 24 });
-        gsap.set(cards, { opacity: 0, scale: 0.94 });
+        gsap.set(cats, { opacity: 0, y: 24 });
 
         gsap.to(titleRef.current, {
           opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
@@ -246,28 +183,24 @@ export const SkillsPage = () => {
           opacity: 1, y: 0, duration: 0.6, ease: "power3.out", delay: 0.15,
           scrollTrigger: { trigger: el, start: "top 80%", toggleActions: "play none none none", id: "sk-sub" },
         });
-        gsap.to(cat, {
+        gsap.to(cats, {
           opacity: 1, y: 0, duration: 0.55, ease: "power2.out",
-          stagger: { amount: 0.5, from: "start" },
+          stagger: { amount: 0.6, from: "start" },
           scrollTrigger: { trigger: el, start: "top 72%", toggleActions: "play none none none", id: "sk-cats" },
         });
-        gsap.to(cards, {
-          opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.4)",
-          stagger: { amount: 0.9, from: "start" },
-          scrollTrigger: { trigger: el, start: "top 68%", toggleActions: "play none none none", id: "sk-cards" },
-        });
 
+        // Animate category-level bars + percentages
         ScrollTrigger.create({
           trigger: el, start: "top 68%", id: "sk-bars",
           onEnter: () => {
-            el.querySelectorAll(".skill-bar").forEach((bar) => {
-              gsap.to(bar, { width: `${bar.dataset.target}%`, duration: 1.1, ease: "power2.out", delay: 0.4 });
+            el.querySelectorAll(".cat-bar").forEach((bar) => {
+              gsap.to(bar, { width: `${bar.dataset.target}%`, duration: 1.2, ease: "power2.out", delay: 0.3 });
             });
-            el.querySelectorAll(".skill-pct").forEach((pct) => {
+            el.querySelectorAll(".cat-pct").forEach((pct) => {
               const target = parseFloat(pct.dataset.target);
               const obj = { val: 0 };
               gsap.to(obj, {
-                val: target, duration: 1.1, ease: "power2.out", delay: 0.4,
+                val: target, duration: 1.2, ease: "power2.out", delay: 0.3,
                 onUpdate: () => { pct.textContent = `${Math.round(obj.val)}%`; },
               });
             });
@@ -338,7 +271,11 @@ export const SkillsPage = () => {
             />
           </div>
 
-          <div className="w-full max-w-5xl flex flex-col gap-10">
+          {/* Two-column grid on md+, single column on mobile */}
+          <div
+            className="w-full max-w-5xl grid gap-5"
+            style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(420px, 100%), 1fr))" }}
+          >
             {SKILL_CATEGORIES.map((cat) => (
               <CategoryBlock key={cat.id} category={cat} />
             ))}
