@@ -150,5 +150,13 @@
     "category": "Web Dev",
     "topic": "Authentication: Sessions vs JWT",
     "date": "2026-08-13"
+  },
+  {
+    "id": "2026-08-15-what-is-the-key-difference-between-a-simple-llm-call-and-an-ai-agent",
+    "question": "What is the key difference between a simple LLM call and an AI agent?",
+    "answer": "A simple LLM call is stateless and generates a response in a single turn based only on the input prompt. An AI agent is an autonomous system that uses an LLM as its reasoning engine to loop through planning, using external tools, observing the results, and taking further actions to achieve a multi-step goal.",
+    "category": "Gen AI",
+    "topic": "Agent vs simple LLM call",
+    "date": "2026-08-15"
   }
 ]
