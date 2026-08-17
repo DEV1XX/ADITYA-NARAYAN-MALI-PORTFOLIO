@@ -158,5 +158,13 @@
     "category": "Gen AI",
     "topic": "Agent vs simple LLM call",
     "date": "2026-08-15"
+  },
+  {
+    "id": "2026-08-17-when-should-you-choose-stateful-sessions-over-stateless-jwts-for-a-web-application",
+    "question": "When should you choose stateful sessions over stateless JWTs for a web application?",
+    "answer": "Stateful sessions are ideal when you need strict security control and the ability to instantly revoke a user's access, such as in banking applications. Because session data is stored on the server, you can easily terminate a user session at any time, whereas JWTs are stateless and remain valid until they expire unless you implement a complex revocation blacklist.",
+    "category": "Web Dev",
+    "topic": "Authentication: Sessions vs JWT",
+    "date": "2026-08-17"
   }
 ]
