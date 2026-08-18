@@ -166,5 +166,13 @@
     "category": "Web Dev",
     "topic": "Authentication: Sessions vs JWT",
     "date": "2026-08-17"
+  },
+  {
+    "id": "2026-08-18-what-is-retrieval-augmented-generation-rag-and-why-is-it-used-in-generative-ai",
+    "question": "What is Retrieval-Augmented Generation (RAG) and why is it used in Generative AI?",
+    "answer": "RAG is a technique that combines a standard Large Language Model with an external knowledge base to fetch relevant factual data before generating a response. It is used to eliminate hallucinations, reduce the need for expensive model retraining, and allow AI systems to securely access private or frequently updated data.",
+    "category": "Gen AI",
+    "topic": "What is RAG and why use it",
+    "date": "2026-08-18"
   }
 ]
