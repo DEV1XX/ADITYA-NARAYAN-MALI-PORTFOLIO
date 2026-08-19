@@ -174,5 +174,13 @@
     "category": "Gen AI",
     "topic": "What is RAG and why use it",
     "date": "2026-08-18"
+  },
+  {
+    "id": "2026-08-19-what-is-the-primary-difference-between-a-constructor-and-a-destructor-in-object-oriented-programming",
+    "question": "What is the primary difference between a constructor and a destructor in Object-Oriented Programming?",
+    "answer": "A constructor is a special member function that initializes an object when it is created, allocating necessary memory and resources. In contrast, a destructor is automatically called when an object goes out of scope or is deleted, its purpose being to free up those allocated resources and prevent memory leaks.",
+    "category": "OOPs",
+    "topic": "Constructor vs Destructor",
+    "date": "2026-08-19"
   }
 ]
