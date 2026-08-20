@@ -182,5 +182,13 @@
     "category": "OOPs",
     "topic": "Constructor vs Destructor",
     "date": "2026-08-19"
+  },
+  {
+    "id": "2026-08-20-what-is-the-difference-between-optimistic-and-pessimistic-concurrency-control-in-a-dbms",
+    "question": "What is the difference between optimistic and pessimistic concurrency control in a DBMS?",
+    "answer": "Pessimistic concurrency control assumes conflicts are likely and uses locks to prevent them before they occur, which can reduce throughput. Optimistic concurrency control assumes conflicts are rare, allowing transactions to proceed without locks and validating them only at the commit stage to check for data overlaps.",
+    "category": "DBMS",
+    "topic": "Transactions and Concurrency Control",
+    "date": "2026-08-20"
   }
 ]
