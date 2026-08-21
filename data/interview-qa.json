@@ -190,5 +190,13 @@
     "category": "DBMS",
     "topic": "Transactions and Concurrency Control",
     "date": "2026-08-20"
+  },
+  {
+    "id": "2026-08-21-what-is-the-primary-difference-between-aggregation-and-composition-in-object-oriented-programming",
+    "question": "What is the primary difference between Aggregation and Composition in Object-Oriented Programming?",
+    "answer": "Aggregation represents a weak has-a relationship where the child object can exist independently of the parent container, such as a Department and a Professor. Composition represents a strong has-a relationship where the child object cannot exist without the parent, such as a House and its Rooms, meaning if the parent is destroyed, the child is also destroyed.",
+    "category": "OOPs",
+    "topic": "Association, Aggregation, Composition",
+    "date": "2026-08-21"
   }
 ]
