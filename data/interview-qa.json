@@ -198,5 +198,13 @@
     "category": "OOPs",
     "topic": "Association, Aggregation, Composition",
     "date": "2026-08-21"
+  },
+  {
+    "id": "2026-08-22-what-is-zero-shot-prompting-and-how-does-it-differ-from-few-shot-prompting",
+    "question": "What is zero-shot prompting, and how does it differ from few-shot prompting?",
+    "answer": "Zero-shot prompting involves asking a large language model to perform a task without providing any prior examples or demonstrations in the prompt. It relies entirely on the model's pre-trained knowledge to understand and execute the instruction. In contrast, few-shot prompting includes a few examples of the desired input and output to guide the model, which typically improves accuracy on complex or highly specific tasks.",
+    "category": "Gen AI",
+    "topic": "Prompt Engineering basics",
+    "date": "2026-08-22"
   }
 ]
