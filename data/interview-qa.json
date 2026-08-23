@@ -206,5 +206,13 @@
     "category": "Gen AI",
     "topic": "Prompt Engineering basics",
     "date": "2026-08-22"
+  },
+  {
+    "id": "2026-08-23-what-does-the-i-in-acid-properties-stand-for-and-why-is-it-important-in-a-database-management-system",
+    "question": "What does the 'I' in ACID properties stand for, and why is it important in a Database Management System?",
+    "answer": "The 'I' stands for Isolation, which ensures that concurrent transactions execute independently without interfering with one another. This property prevents issues like dirty reads and race conditions, guaranteeing that the final database state is the same as if the transactions were executed sequentially.",
+    "category": "DBMS",
+    "topic": "ACID Properties",
+    "date": "2026-08-23"
   }
 ]
