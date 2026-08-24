@@ -214,5 +214,13 @@
     "category": "DBMS",
     "topic": "ACID Properties",
     "date": "2026-08-23"
+  },
+  {
+    "id": "2026-08-24-when-building-a-software-application-using-generative-ai-under-what-specific-scenario-would-you-choose-to-implement-a-multi-step-agent-instead-of-a-single-highly-detailed-llm-prompt",
+    "question": "When building a software application using Generative AI, under what specific scenario would you choose to implement a multi-step agent instead of a single, highly detailed LLM prompt?",
+    "answer": "You should choose an agent when the task requires iterative reasoning, decision-making based on intermediate results, or interaction with external tools like APIs and databases. While a single prompt handles static, one-shot generation, an agent dynamically loops through planning, executing actions, and observing outputs to solve complex, multi-stage problems.",
+    "category": "Gen AI",
+    "topic": "Agent vs simple LLM call",
+    "date": "2026-08-24"
   }
 ]
