@@ -222,5 +222,13 @@
     "category": "Gen AI",
     "topic": "Agent vs simple LLM call",
     "date": "2026-08-24"
+  },
+  {
+    "id": "2026-08-25-when-would-you-choose-a-nosql-database-over-a-sql-database-in-terms-of-scalability-and-what-is-the-underlying-mechanism-that-enables-this",
+    "question": "When would you choose a NoSQL database over a SQL database in terms of scalability, and what is the underlying mechanism that enables this?",
+    "answer": "You would choose a NoSQL database when dealing with massive scale and high velocity unstructured data because NoSQL databases are designed for horizontal scaling, or scaling out. This is achieved through sharding, which automatically distributes data across multiple cheaper commodity servers rather than relying on a single powerful machine.",
+    "category": "DBMS",
+    "topic": "SQL vs NoSQL tradeoffs",
+    "date": "2026-08-25"
   }
 ]
