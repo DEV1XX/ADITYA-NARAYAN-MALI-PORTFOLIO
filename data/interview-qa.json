@@ -230,5 +230,13 @@
     "category": "DBMS",
     "topic": "SQL vs NoSQL tradeoffs",
     "date": "2026-08-25"
+  },
+  {
+    "id": "2026-08-27-what-is-the-core-principle-behind-dynamic-programming-and-how-does-it-differ-from-standard-recursion",
+    "question": "What is the core principle behind dynamic programming, and how does it differ from standard recursion?",
+    "answer": "Dynamic programming is an optimization technique used to solve complex problems by breaking them down into simpler overlapping subproblems and storing their solutions to avoid redundant work. While standard recursion repeatedly computes the same subproblems leading to exponential time complexity, dynamic programming uses memoization or tabulation to achieve polynomial time. In short, it trades extra memory space for significantly faster execution speed.",
+    "category": "DSA",
+    "topic": "Dynamic Programming basics",
+    "date": "2026-08-27"
   }
 ]
