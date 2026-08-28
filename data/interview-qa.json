@@ -238,5 +238,13 @@
     "category": "DSA",
     "topic": "Dynamic Programming basics",
     "date": "2026-08-27"
+  },
+  {
+    "id": "2026-08-28-when-would-you-choose-a-sql-database-over-a-nosql-database-in-terms-of-data-consistency-and-structure",
+    "question": "When would you choose a SQL database over a NoSQL database in terms of data consistency and structure?",
+    "answer": "You should choose a SQL database when your application requires strict ACID compliance for transactional integrity and your data has a well-defined, relational structure. SQL databases use predefined schemas and foreign keys, making them ideal for complex queries and applications like banking where data accuracy is critical. In contrast, NoSQL is better suited for unstructured data and rapid, flexible scaling where rigid schemas would slow development.",
+    "category": "DBMS",
+    "topic": "SQL vs NoSQL tradeoffs",
+    "date": "2026-08-28"
   }
 ]
