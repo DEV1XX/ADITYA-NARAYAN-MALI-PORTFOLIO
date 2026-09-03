@@ -246,5 +246,13 @@
     "category": "DBMS",
     "topic": "SQL vs NoSQL tradeoffs",
     "date": "2026-08-28"
+  },
+  {
+    "id": "2026-09-03-what-is-the-difference-between-an-iterative-and-a-recursive-dns-query-during-the-name-resolution-process",
+    "question": "What is the difference between an iterative and a recursive DNS query during the name resolution process?",
+    "answer": "In a recursive query, the local DNS server takes full responsibility for finding the IP address, forcing other servers to provide either the final answer or an error. In an iterative query, the local server asks root and TLD servers one by one, and those servers simply return the best referral they have if they do not know the exact answer.",
+    "category": "CN",
+    "topic": "DNS resolution process",
+    "date": "2026-09-03"
   }
 ]
