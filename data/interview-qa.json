@@ -254,5 +254,13 @@
     "category": "CN",
     "topic": "DNS resolution process",
     "date": "2026-09-03"
+  },
+  {
+    "id": "2026-09-04-what-is-the-difference-between-encapsulation-and-abstraction-and-why-are-both-important-in-object-oriented-programming",
+    "question": "What is the difference between encapsulation and abstraction, and why are both important in object-oriented programming?",
+    "answer": "Abstraction focuses on hiding internal implementation details and showing only the essential features of an object, whereas encapsulation is the mechanism of bundling data and methods together into a single unit while restricting direct access to the data. Abstraction deals with design at a higher level to reduce complexity, while encapsulation uses access modifiers to protect data integrity and prevent unintended interference.",
+    "category": "OOPs",
+    "topic": "Four Pillars of OOP (Encapsulation, Abstraction, Inheritance, Polymorphism)",
+    "date": "2026-09-04"
   }
 ]
