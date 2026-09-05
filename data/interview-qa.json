@@ -262,5 +262,13 @@
     "category": "OOPs",
     "topic": "Four Pillars of OOP (Encapsulation, Abstraction, Inheritance, Polymorphism)",
     "date": "2026-09-04"
+  },
+  {
+    "id": "2026-09-05-how-does-server-side-rendering-ssr-impact-first-contentful-paint-fcp-and-time-to-interactive-tti-compared-to-client-side-rendering-csr",
+    "question": "How does Server-Side Rendering (SSR) impact First Contentful Paint (FCP) and Time to Interactive (TTI) compared to Client-Side Rendering (CSR)?",
+    "answer": "SSR generally provides a faster First Contentful Paint because the server sends a fully rendered HTML page, allowing the browser to display content immediately without waiting for JavaScript to download. However, its Time to Interactive might still be delayed if the browser needs to wait for JavaScript to execute and hydrate the page before it becomes fully responsive.",
+    "category": "Web Dev",
+    "topic": "Client-Side vs Server-Side Rendering",
+    "date": "2026-09-05"
   }
 ]
