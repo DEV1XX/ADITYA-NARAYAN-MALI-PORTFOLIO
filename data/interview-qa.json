@@ -270,5 +270,13 @@
     "category": "Web Dev",
     "topic": "Client-Side vs Server-Side Rendering",
     "date": "2026-09-05"
+  },
+  {
+    "id": "2026-09-07-how-can-you-distinguish-between-association-aggregation-and-composition-in-terms-of-object-lifecycles-and-ownership",
+    "question": "How can you distinguish between Association, Aggregation, and Composition in terms of object lifecycles and ownership?",
+    "answer": "Association represents a general, independent relationship where objects can exist without each other. Aggregation is a specialized form of association denoting a whole-part relationship where the part can survive independently of the whole. Composition is a strict form of aggregation where the part is entirely owned by the whole and cannot exist independently if the whole is destroyed.",
+    "category": "OOPs",
+    "topic": "Association, Aggregation, Composition",
+    "date": "2026-09-07"
   }
 ]
