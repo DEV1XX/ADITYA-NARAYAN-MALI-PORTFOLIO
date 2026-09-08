@@ -278,5 +278,13 @@
     "category": "OOPs",
     "topic": "Association, Aggregation, Composition",
     "date": "2026-09-07"
+  },
+  {
+    "id": "2026-09-08-what-is-the-primary-fundamental-difference-in-data-schema-design-between-sql-and-nosql-databases-and-when-would-you-choose-one-over-the-other",
+    "question": "What is the primary fundamental difference in data schema design between SQL and NoSQL databases, and when would you choose one over the other?",
+    "answer": "SQL databases are relational and use a rigid, predefined schema with tables and rows, making them ideal for complex queries and transactional integrity like banking systems. NoSQL databases are non-relational and use flexible, dynamic schemas like document or key-value stores, making them better suited for rapidly changing data and massive horizontal scaling like real-time analytics.",
+    "category": "DBMS",
+    "topic": "SQL vs NoSQL tradeoffs",
+    "date": "2026-09-08"
   }
 ]
