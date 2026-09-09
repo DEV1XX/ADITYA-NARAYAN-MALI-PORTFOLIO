@@ -286,5 +286,13 @@
     "category": "DBMS",
     "topic": "SQL vs NoSQL tradeoffs",
     "date": "2026-09-08"
+  },
+  {
+    "id": "2026-09-09-what-is-the-primary-difference-between-an-abstract-class-and-an-interface-in-object-oriented-programming",
+    "question": "What is the primary difference between an abstract class and an interface in Object-Oriented Programming?",
+    "answer": "An abstract class can have both abstract and concrete methods, instance variables, and constructors, allowing subclasses to share common state and behavior through single inheritance. In contrast, an interface historically defines only method signatures and constants, allowing a class to implement multiple interfaces and achieve multiple inheritance. Use an abstract class for closely related objects with shared code, and an interface to define a common contract for unrelated classes.",
+    "category": "OOPs",
+    "topic": "Abstract Class vs Interface",
+    "date": "2026-09-09"
   }
 ]
