@@ -294,5 +294,13 @@
     "category": "OOPs",
     "topic": "Abstract Class vs Interface",
     "date": "2026-09-09"
+  },
+  {
+    "id": "2026-09-11-what-are-the-rules-regarding-return-types-and-access-modifiers-when-overriding-a-method-in-a-subclass",
+    "question": "What are the rules regarding return types and access modifiers when overriding a method in a subclass?",
+    "answer": "When overriding a method, the return type must be the same or a subtype (covariant return type) of the original method, and the access modifier cannot be more restrictive than the overridden method. However, exceptions thrown in the overridden method must be the same, a subclass, or no exceptions at all, while the method name and parameter list must remain identical.",
+    "category": "OOPs",
+    "topic": "Method Overloading vs Overriding",
+    "date": "2026-09-11"
   }
 ]
