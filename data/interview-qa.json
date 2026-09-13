@@ -302,5 +302,13 @@
     "category": "OOPs",
     "topic": "Method Overloading vs Overriding",
     "date": "2026-09-11"
+  },
+  {
+    "id": "2026-09-13-what-is-the-primary-difference-between-a-left-join-and-a-right-join-in-a-relational-database",
+    "question": "What is the primary difference between a LEFT JOIN and a RIGHT JOIN in a relational database?",
+    "answer": "A LEFT JOIN returns all records from the left table and the matched records from the right table, filling with NULLs if no match is found. Conversely, a RIGHT JOIN returns all records from the right table and the matched records from the left table, similarly using NULLs for missing matches.",
+    "category": "DBMS",
+    "topic": "Joins (Inner, Left, Right, Full)",
+    "date": "2026-09-13"
   }
 ]
