@@ -310,5 +310,13 @@
     "category": "DBMS",
     "topic": "Joins (Inner, Left, Right, Full)",
     "date": "2026-09-13"
+  },
+  {
+    "id": "2026-09-15-after-the-browser-obtains-the-ip-address-via-dns-what-protocol-is-used-to-establish-a-secure-connection-with-the-web-server-and-how-does-it-work",
+    "question": "After the browser obtains the IP address via DNS, what protocol is used to establish a secure connection with the web server, and how does it work?",
+    "answer": "The browser uses the TLS (Transport Layer Security) handshake protocol to establish a secure, encrypted connection with the server. During this process, they exchange security certificates, agree on encryption algorithms, and generate session keys to ensure that all subsequently transferred HTTP data remains private and tamper-proof.",
+    "category": "CN",
+    "topic": "What happens when you type a URL in the browser",
+    "date": "2026-09-15"
   }
 ]
