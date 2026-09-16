@@ -318,5 +318,13 @@
     "category": "CN",
     "topic": "What happens when you type a URL in the browser",
     "date": "2026-09-15"
+  },
+  {
+    "id": "2026-09-16-how-does-the-javascript-event-loop-prioritize-tasks-between-the-microtask-queue-and-the-callback-queue",
+    "question": "How does the JavaScript Event Loop prioritize tasks between the microtask queue and the callback queue?",
+    "answer": "The event loop always prioritizes the microtask queue, which holds promises and mutation observer callbacks, over the callback queue, which holds setTimeout and DOM event callbacks. It will continuously execute all tasks in the microtask queue until it is completely empty before fetching even a single task from the callback queue.",
+    "category": "Web Dev",
+    "topic": "Event Loop in JavaScript",
+    "date": "2026-09-16"
   }
 ]
