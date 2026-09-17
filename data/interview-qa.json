@@ -326,5 +326,13 @@
     "category": "Web Dev",
     "topic": "Event Loop in JavaScript",
     "date": "2026-09-16"
+  },
+  {
+    "id": "2026-09-17-given-an-array-of-integers-of-size-n-and-an-integer-k-find-the-maximum-sum-of-any-contiguous-subarray-of-size-k-using-the-sliding-window-technique",
+    "question": "Given an array of integers of size n and an integer k, find the maximum sum of any contiguous subarray of size k using the Sliding Window Technique.",
+    "answer": "To solve this efficiently, we first compute the sum of the initial window of the first k elements. Then, we slide the window one element to the right at a time by subtracting the element leaving the left of the window and adding the new element entering the right. By tracking the maximum sum obtained during each step, we achieve an optimal time complexity of O(n) instead of O(n times k).",
+    "category": "DSA",
+    "topic": "Sliding Window Technique",
+    "date": "2026-09-17"
   }
 ]
