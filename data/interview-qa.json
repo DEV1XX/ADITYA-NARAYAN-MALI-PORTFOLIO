@@ -334,5 +334,13 @@
     "category": "DSA",
     "topic": "Sliding Window Technique",
     "date": "2026-09-17"
+  },
+  {
+    "id": "2026-09-18-how-does-polymorphism-differ-between-compile-time-and-runtime-in-object-oriented-programming",
+    "question": "How does polymorphism differ between compile-time and runtime in object-oriented programming?",
+    "answer": "Compile-time polymorphism is achieved through method overloading, where the compiler determines which method to execute based on method signatures. In contrast, runtime polymorphism relies on method overriding and inheritance, allowing the program to decide which method implementation to run dynamically while the program is executing.",
+    "category": "OOPs",
+    "topic": "Four Pillars of OOP (Encapsulation, Abstraction, Inheritance, Polymorphism)",
+    "date": "2026-09-18"
   }
 ]
