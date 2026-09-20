@@ -7,6 +7,7 @@ import { AboutPage } from "./Slides/AboutPage";
 import { SkillsPage } from "./Slides/SkillsPage";
 import { ProjectsPage } from "./Slides/ProjectsPage";
 import { ContactPage } from "./Slides/ContactPage";
+import { ExperiencePage } from './Slides/ExperiencePage';
 import Menubar from "./Slides/Menubar";
 // Navbar import removed - no longer needed
 import { gsap } from 'gsap';
@@ -144,6 +145,7 @@ export default function Home() {
       <LandingPage />
       <Menubar />
       <AboutPage />
+      <ExperiencePage />
       <SkillsPage /> 
       <ProjectsPage />
       <ContactPage />
