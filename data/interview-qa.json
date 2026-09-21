@@ -342,5 +342,13 @@
     "category": "OOPs",
     "topic": "Four Pillars of OOP (Encapsulation, Abstraction, Inheritance, Polymorphism)",
     "date": "2026-09-18"
+  },
+  {
+    "id": "2026-09-21-what-is-a-clustered-index-and-how-does-it-differ-from-a-non-clustered-index",
+    "question": "What is a clustered index, and how does it differ from a non-clustered index?",
+    "answer": "A clustered index determines the physical order of data rows in a table, meaning a table can have only one clustered index. In contrast, a non-clustered index maintains a separate logical structure containing pointers to the actual data rows, allowing a table to have multiple non-clustered indices. Consequently, queries searching for a range of values are typically faster using a clustered index.",
+    "category": "DBMS",
+    "topic": "Indexing and its types",
+    "date": "2026-09-21"
   }
 ]
