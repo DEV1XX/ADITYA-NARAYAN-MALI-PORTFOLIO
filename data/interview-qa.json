@@ -350,5 +350,13 @@
     "category": "DBMS",
     "topic": "Indexing and its types",
     "date": "2026-09-21"
+  },
+  {
+    "id": "2026-09-23-what-is-the-difference-between-an-authoritative-dns-server-and-a-recursive-dns-resolver",
+    "question": "What is the difference between an authoritative DNS server and a recursive DNS resolver?",
+    "answer": "A recursive resolver acts as an intermediary that accepts client queries and hunts down the answer by communicating with other DNS servers, eventually caching the result. An authoritative name server is the final source that holds the actual DNS records for a specific domain and provides the definitive IP address to the resolver.",
+    "category": "CN",
+    "topic": "DNS resolution process",
+    "date": "2026-09-23"
   }
 ]
