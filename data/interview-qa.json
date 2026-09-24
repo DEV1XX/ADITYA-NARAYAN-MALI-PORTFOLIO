@@ -358,5 +358,13 @@
     "category": "CN",
     "topic": "DNS resolution process",
     "date": "2026-09-23"
+  },
+  {
+    "id": "2026-09-24-how-does-the-model-context-protocol-mcp-facilitate-secure-communication-between-ai-models-and-local-data-sources",
+    "question": "How does the Model Context Protocol (MCP) facilitate secure communication between AI models and local data sources?",
+    "answer": "MCP provides a standardized client-server architecture where host applications securely connect AI models to local files, databases, and development tools through structured APIs. This design ensures that sensitive local data is exposed to the model only through explicit, controlled permissions without requiring custom integration code for every new data source.",
+    "category": "Gen AI",
+    "topic": "What is Model Context Protocol (MCP)",
+    "date": "2026-09-24"
   }
 ]
