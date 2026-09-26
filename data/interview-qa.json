@@ -366,5 +366,13 @@
     "category": "Gen AI",
     "topic": "What is Model Context Protocol (MCP)",
     "date": "2026-09-24"
+  },
+  {
+    "id": "2026-09-26-how-does-an-inner-join-differ-from-a-left-outer-join-in-terms-of-handling-unmatched-rows",
+    "question": "How does an Inner Join differ from a Left Outer Join in terms of handling unmatched rows?",
+    "answer": "An Inner Join returns only the rows that have matching values in both tables, completely excluding any unmatched records. In contrast, a Left Outer Join returns all records from the left table along with the matching records from the right table, filling in NULL values for any missing matches on the right side.",
+    "category": "DBMS",
+    "topic": "Joins (Inner, Left, Right, Full)",
+    "date": "2026-09-26"
   }
 ]
