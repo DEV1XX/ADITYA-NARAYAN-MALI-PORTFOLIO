@@ -374,5 +374,13 @@
     "category": "DBMS",
     "topic": "Joins (Inner, Left, Right, Full)",
     "date": "2026-09-26"
+  },
+  {
+    "id": "2026-09-29-how-does-the-browser-locate-the-correct-web-server-once-a-url-is-entered-and-what-protocol-is-used-for-this-process",
+    "question": "How does the browser locate the correct web server once a URL is entered, and what protocol is used for this process?",
+    "answer": "The browser first checks its local cache and then queries the operating system or a DNS server to translate the domain name into an IP address. This lookup process uses the Domain Name System (DNS) over UDP or TCP on port 53. Once the IP address is retrieved, the browser can establish a direct network connection with the target web server.",
+    "category": "CN",
+    "topic": "What happens when you type a URL in the browser",
+    "date": "2026-09-29"
   }
 ]
