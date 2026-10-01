@@ -382,5 +382,13 @@
     "category": "CN",
     "topic": "What happens when you type a URL in the browser",
     "date": "2026-09-29"
+  },
+  {
+    "id": "2026-10-01-what-is-the-time-complexity-of-a-recursive-function-that-makes-two-recursive-calls-of-size-n2-in-each-step-and-what-is-a-common-real-world-algorithm-that-fits-this-pattern",
+    "question": "What is the time complexity of a recursive function that makes two recursive calls of size n/2 in each step, and what is a common real-world algorithm that fits this pattern?",
+    "answer": "The time complexity is O(n log n) because the recursion tree has log n levels and requires O(n) work at each level to combine the results. A classic example of this pattern is Merge Sort, which repeatedly divides the array in half and merges the sorted halves.",
+    "category": "DSA",
+    "topic": "Time and Space Complexity (Big O)",
+    "date": "2026-10-01"
   }
 ]
