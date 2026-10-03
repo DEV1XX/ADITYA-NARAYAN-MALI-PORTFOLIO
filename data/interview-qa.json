@@ -390,5 +390,13 @@
     "category": "DSA",
     "topic": "Time and Space Complexity (Big O)",
     "date": "2026-10-01"
+  },
+  {
+    "id": "2026-10-03-given-a-string-of-lowercase-english-letters-find-the-length-of-the-longest-substring-without-repeating-characters-using-the-sliding-window-technique",
+    "question": "Given a string of lowercase English letters, find the length of the longest substring without repeating characters using the Sliding Window technique.",
+    "answer": "We use a variable-size sliding window with a hash set or frequency map to track unique characters. The right pointer expands the window by adding new characters, while the left pointer shrinks the window from the left whenever a duplicate character is encountered, ensuring all characters in the current window remain unique. Throughout this process, we maintain the maximum window length observed, yielding an optimal O(n) time complexity.",
+    "category": "DSA",
+    "topic": "Sliding Window Technique",
+    "date": "2026-10-03"
   }
 ]
