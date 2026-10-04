@@ -398,5 +398,13 @@
     "category": "DSA",
     "topic": "Sliding Window Technique",
     "date": "2026-10-03"
+  },
+  {
+    "id": "2026-10-04-what-is-a-closure-in-javascript-and-why-are-they-commonly-used",
+    "question": "What is a closure in JavaScript, and why are they commonly used?",
+    "answer": "A closure is the combination of a function bundled together with references to its surrounding lexical environment, allowing the inner function to access variables from an outer function even after that outer function has finished executing. They are commonly used for data privacy and encapsulation, enabling private variables that cannot be accessed directly from the global scope.",
+    "category": "Web Dev",
+    "topic": "Closures in JavaScript",
+    "date": "2026-10-04"
   }
 ]
