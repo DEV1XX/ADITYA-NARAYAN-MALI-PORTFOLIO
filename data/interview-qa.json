@@ -406,5 +406,13 @@
     "category": "Web Dev",
     "topic": "Closures in JavaScript",
     "date": "2026-10-04"
+  },
+  {
+    "id": "2026-10-05-can-a-constructor-or-a-destructor-be-declared-as-virtual-in-c-and-why-or-why-not",
+    "question": "Can a constructor or a destructor be declared as virtual in C++, and why or why not?",
+    "answer": "Constructors cannot be virtual because an object does not yet exist during its construction, meaning the virtual table pointer is not fully set up. However, destructors can and often should be virtual in base classes to ensure that derived class destructors are properly called when deleting an object through a base class pointer, preventing memory leaks.",
+    "category": "OOPs",
+    "topic": "Constructor vs Destructor",
+    "date": "2026-10-05"
   }
 ]
